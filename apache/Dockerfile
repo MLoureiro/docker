@@ -12,7 +12,7 @@ RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get -y install apache2 \
     && apt-get clean
 
-RUN a2enmod ssl 
+RUN a2enmod ssl \
     && a2ensite default-ssl
 
 EXPOSE 80
