@@ -12,6 +12,10 @@ RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get -y install apache2 \
     && apt-get clean
 
+RUN a2enmod ssl 
+    && a2ensite default-ssl
+
 EXPOSE 80
+EXPOSE 443
 
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
