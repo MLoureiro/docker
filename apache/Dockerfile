@@ -8,7 +8,7 @@ ENV APACHE_LOG_DIR /var/log/apache2
 # fix for error: invoke-rc.d: policy-rc.d denied execution of start
 RUN sed -i.bk 's/101/0/' /usr/sbin/policy-rc.d
 
-RUN DEBIAN_FRONTEND noninteractive \ 
+RUN DEBIAN_FRONTEND=noninteractive \ 
     &&  apt-get update \ 
     && apt-get -y install apache2\
     && apt-get clean
