@@ -1,7 +1,11 @@
 FROM phusion/baseimage
 
 RUN apt-get update \
-    && DEBIAN_FRONTEND=noninteractive apt-get -y install nodejs npm build-essential \
+    && DEBIAN_FRONTEND=noninteractive apt-get -y install \
+      git \
+      nodejs \
+      npm \
+      build-essential \
     && apt-get clean \
     && ln -s "$(which nodejs)" /usr/bin/node
 
