@@ -18,9 +18,7 @@ if [[ `diff $DEFAULT_CONF_PATH $CUSTOM_CONF_PATH` == "" ]]; then
 fi
 
 # Make sym link to the ddclient.conf file
-if [[ -h /etc/ddclient.conf ]]; then 
-  # do nothing
-else
+if [[ ! -h /etc/ddclient.conf ]]; then
   rm /etc/ddclient.conf
   ln -s $CUSTOM_CONF_PATH /etc/ddclient.conf
 fi
