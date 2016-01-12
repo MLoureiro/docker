@@ -5,5 +5,5 @@ MAINTAINER mloureiro <mloureiro.dev@gmail.com>
 ADD ddclient.conf /root/ddclient/ddclient.conf
 
 RUN apt-get update \
-    && DEBIAN_FRONTEND=noninteractive apt-get -y ddclient
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y ddclient
     && apt-get clean
