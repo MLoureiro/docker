@@ -16,3 +16,4 @@ then
   echo "Please update the config file with your required data"
   exit 1
 fi
+
