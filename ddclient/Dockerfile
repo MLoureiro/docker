@@ -1,4 +1,4 @@
-FROM phusion/baseimage:0.9.15
+FROM phusion/baseimage:0.9.18
 MAINTAINER mloureiro <mloureiro.dev@gmail.com>
 
 VOLUME ["/config"]
