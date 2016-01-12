@@ -4,7 +4,7 @@ DEFAULT_CONF_PATH=/root/ddclient/ddclient.conf
 CUSTOM_CONF_PATH=/config/ddclient.conf
 
 # Search for custom config file, if it doesn't exist, copy the default one
-if [ ! -f /config/ddclient.conf ]; then
+if [ ! -f $CUSTOM_CONF_PATH ]; then
   echo "Creating config file. Please do not forget to enter your info in ddclient.conf."
   cp $DEFAULT_CONF_PATH $CUSTOM_CONF_PATH
   chmod a+w $CUSTOM_CONF_PATH
