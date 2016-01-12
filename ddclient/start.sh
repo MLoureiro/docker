@@ -16,3 +16,11 @@ if [[ `diff $DEFAULT_CONF_PATH $CUSTOM_CONF_PATH` == "" ]]; then
   echo "Please update the config file with your required data"
   exit 1
 fi
+
+# Make sym link to the ddclient.conf file
+if [[ -h /etc/ddclient.conf ]]; then 
+  # do nothing
+else
+  rm /etc/ddclient.conf
+  ln -s $CUSTOM_CONF_PATH /etc/ddclient.conf
+fi
