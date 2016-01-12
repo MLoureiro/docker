@@ -23,4 +23,4 @@ if [[ ! -h /etc/ddclient.conf ]]; then
   ln -s $CUSTOM_CONF_PATH /etc/ddclient.conf
 fi
 
-#ddclient restart
+service ddclient start
