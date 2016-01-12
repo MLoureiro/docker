@@ -24,3 +24,4 @@ if [[ ! -h /etc/ddclient.conf ]]; then
 fi
 
 service ddclient start
+bash
